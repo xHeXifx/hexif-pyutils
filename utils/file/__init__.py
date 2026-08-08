@@ -30,6 +30,7 @@ class File:
         
 
 def read(filename: str|_Path) -> str|None:
+    """Read contents of a file"""
     try:
         if _isfile(filename):
             with open(filename, 'r') as f:
@@ -40,6 +41,16 @@ def read(filename: str|_Path) -> str|None:
         raise Exception(f"Failed to read file {filename}") from e
     
 def write(data: _Any, filename: str|_Path) -> bool|None:
+    """Opens file as 'w' and writes data
+    
+    Args:
+        data: Information to write
+        filename: File to write to
+
+    Returns:
+        bool (True): If completed successfully
+        None: If fails and raises Exception
+    """
     try:
         with open(filename, 'w') as f:
             f.write(data)
@@ -48,12 +59,19 @@ def write(data: _Any, filename: str|_Path) -> bool|None:
         raise Exception(f"Failed to write to file {filename}") from e
 
 def get(file: str|_Path) -> File|None:
+    """Get information on a file
+    
+    Returns:
+        File: If file is found
+        None: If file is not found
+    """
     if _exists(file):
         return File(file)
     else:
         raise FileNotFoundError()
 
 def touch(file: str|_Path) -> None:
+    """Touch (create) a empty file"""
     if _exists(file):
         return None
     
