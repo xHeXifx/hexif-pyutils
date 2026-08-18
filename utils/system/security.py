@@ -11,6 +11,8 @@ def ensureTouchID() -> bool:
 
 
 def askForTouchID(reason: str = "confirm a action") -> bool:
+    if not ensureTouchID():
+        raise TouchIDError("touchid executable is not installed")
     result = subprocess.run(
         ["touchid", reason],
         stdout=subprocess.PIPE,
@@ -20,6 +22,8 @@ def askForTouchID(reason: str = "confirm a action") -> bool:
 
     if result.returncode == 0:
         return True
+    if result.returncode == 1:
+        return False
 
     if result.returncode == 2:
         raise TouchIDError(
