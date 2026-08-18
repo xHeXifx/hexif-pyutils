@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hexif-pyutils"
+version = "1.0.0"
+description = "Simple python utility library"
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+include = ["utils*"]

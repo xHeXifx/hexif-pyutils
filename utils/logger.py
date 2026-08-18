@@ -1,10 +1,6 @@
 import logging as _logging
 from pathlib import Path as _Path
 
-def _appendToLog(content: str, log: Logger):
-    with open(log.logFile, 'a') as f:
-        f.write(content + "\n")
-
 
 import logging as _logging
 from pathlib import Path as _Path
@@ -76,3 +72,7 @@ class Logger:
 
     def isEnabledFor(self, level):
         return self.logger.isEnabledFor(level)
+
+def _appendToLog(content: str, log: Logger):
+    with open(log.logFile, 'a') as f:
+        f.write(content + "\n")
