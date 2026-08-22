@@ -1,4 +1,4 @@
-from . import json
+from ..file import json
 
 from pathlib import Path as _Path
 from os.path import isfile as _isfile

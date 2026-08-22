@@ -2,3 +2,6 @@
 __pycache__
 test.py
 .build
+dist/
+*.py[cod]
+*.egg-info
