@@ -19,19 +19,12 @@ git clone https://github.com/xHeXifx/hexif-pyutils
 
 ```zsh
 cd {repo}/macOS/touchid-executable/touchid-helper
-swift build -c release
+chmod +x build-touchid.sh
+./build-touchid.sh
 ```
-
-Find the executable, will be somewhere in ./build and named 'touchid'
-```zsh
-cp {executable location} /usr/local/bin/touchid
-sudo chmod +x /usr/local/bin/touchid
-```
-
-Optional test
-```zsh
-/usr/local/bin/touchid "perform a test"
-```
+This script will build, copy and finally test the touchid executable.  
+At the end, a touchid popup will appear stating "touchid is trying to perform a test"  
+Allowing this with touchid wont do anything its simply there to let you see if it works 
 
 ## Usage
 
