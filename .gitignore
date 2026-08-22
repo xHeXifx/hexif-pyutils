@@ -5,3 +5,4 @@ test.py
 dist/
 *.py[cod]
 *.egg-info
+.vscode

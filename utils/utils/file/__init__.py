@@ -27,7 +27,9 @@ class File:
         self.size_kb = self.size_bytes / 1024
         self.size_mb = self.size_bytes / 1024**2
         self.size_gb = self.size_bytes / 1024**3
-        
+
+    def read(self):
+        return globals()['read'](self.absolute)
 
 def read(filename: str|_Path) -> str|None:
     """Read contents of a file"""
