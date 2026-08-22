@@ -97,4 +97,3 @@ What it does: checks for the macOS Touch ID helper and asks for confirmation.
 
 - https://hexif.vercel.app
 - https://github.com/xHeXifx
-- (this repo is technically closed source as the content is on my local Gitea)
