@@ -1,3 +1,5 @@
+from . import hashing
+
 import re
 
 def is_valid_email(text: str) -> bool:
