@@ -31,5 +31,6 @@ Allowing this with touchid wont do anything its simply there to let you see if i
 
 ## Credits
 
-- https://hexif.vercel.app
-- https://github.com/xHeXifx
+- [pyperclip](https://pypi.org/project/pyperclip/)
+- [Portfolio](https://hexif.vercel.app)
+- [GitHub](https://github.com/xHeXifx)

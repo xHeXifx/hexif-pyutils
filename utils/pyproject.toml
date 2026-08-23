@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hexif-pyutils"
-version = "1.2.0"
+version = "1.2.1"
 description = "Super simple python utility library"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -18,6 +18,10 @@ keywords = [
     "utils",
     "python",
     "helpers"
+]
+
+dependencies = [
+    "pyperclip>=1.8.2",
 ]
 
 [project.urls]
