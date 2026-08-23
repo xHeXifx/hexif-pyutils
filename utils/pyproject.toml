@@ -25,5 +25,13 @@ Homepage = "https://github.com/xHeXifx/hexif-pyutils"
 Repository = "https://github.com/xHeXifx/hexif-pyutils"
 Issues = "https://github.com/xHeXifx/hexif-pyutils/issues"
 
+[project.optional-dependencies]
+docs = [
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "mkdocs-gen-files",
+    "mkdocs-literate-nav",
+]
+
 [tool.setuptools.packages.find]
 include = ["utils*"]

@@ -11,6 +11,20 @@ def ensureTouchID() -> bool:
 
 
 def askForTouchID(reason: str = "confirm a action") -> bool:
+    """MACOS ONLY
+    Uses the touchid executable to confirm a action
+    Install: https://github.com/xHeXifx/hexif-pyutils/tree/main#install-touchid-helper-macos
+
+    Args:
+        reason: Will appear in popup as "touchid wants to {reason}"
+    
+    Returns:
+        True: If confirmed
+        False: If cancelled
+    
+    Raises:
+        TouchIDError: If touchid feature isn't avalible or not found
+    """
     if not ensureTouchID():
         raise TouchIDError("touchid executable is not installed")
     result = subprocess.run(

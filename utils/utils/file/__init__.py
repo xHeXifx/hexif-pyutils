@@ -6,6 +6,7 @@ from os.path import exists as _exists
 from typing import Any as _Any
 
 class File:
+    """File class for .file.get()"""
     def __init__(self, filename: str|_Path):
         if not isinstance(filename, _Path):
             filename = _Path(filename)
@@ -29,6 +30,7 @@ class File:
         self.size_gb = self.size_bytes / 1024**3
 
     def read(self):
+        """Reaad contents of file"""
         return globals()['read'](self.absolute)
 
 def read(filename: str|_Path) -> str|None:
