@@ -1,8 +1,10 @@
 <div align="center">
 <h1>hexif-pyutils</h1>
 <p>Super simple Python utilities.</p>
+
 [![Documentation](https://img.shields.io/badge/docs-Read%20the%20Docs-blue)](https://hexif-pyutils.readthedocs.io/)
 [![PyPI](https://img.shields.io/pypi/v/hexif-pyutils)](https://pypi.org/project/hexif-pyutils/)
+
 </div>
 
 ## Install
